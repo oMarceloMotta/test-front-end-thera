@@ -1,39 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 Teste Frontend - Gerenciamento de Produtos
 
-## Getting Started
+## Objetivo
 
-First, run the development server:
+Desenvolver uma aplicação web para gerenciamento de produtos, utilizando as melhores práticas de desenvolvimento frontend com **Next.js**, **TypeScript**, **Redux**, **Tailwind CSS** e testes automatizados.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Listagem de Produtos:**  
+  Exibe uma lista com:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  - Nome do produto
+  - Categoria
+  - Preço
+  - Descrição
+  - Imagem (URL)
 
-## Learn More
+- **Cadastro de Produtos:**  
+  Formulário para adicionar novos produtos com os campos:
 
-To learn more about Next.js, take a look at the following resources:
+  - Nome
+  - Preço
+  - Descrição
+  - URL da Imagem  
+    O produto cadastrado aparece automaticamente na lista.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Filtros e Ordenação:**
+  - Buscar produtos pelo nome
+  - Filtrar por faixa de preço
+  - Ordenar resultados
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Tecnologias Utilizadas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Jest](https://jestjs.io/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [json-server](https://github.com/typicode/json-server) (API fake)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
 
+## Como rodar o projeto
 
-npx json-server --watch db.json --port 4000 --host 0.0.0.
+1. **Instale as dependências:**
+
+   ```bash
+   npm install
+   ```
+
+2. **Inicie o servidor:**
+
+   ```bash
+   npx json-server --watch db.json --port 4000 --host 0.0.0.0
+   ```
+
+3. **Inicie a aplicação:**
+
+   ```bash
+   npm run dev
+   ```
+
+## Decisões e escolhas do projeto
+
+- Maioria da tecnologias foram utilizadas devido pensando nos requisitos da vaga como Next.js, Redux, Tailwind CSS, TypeScript, escolhi JSON server por fazer uma API fake por ter mais familiaridade com ela.
+
+### Estrutura de Componentes
+
+A aplicação foi dividida em componentes reutilizáveis, como formulários, tabelas e listas, seguindo o padrão de componentização do React para facilitar a manutenção e a escalabilidade.
+
+### Boas práticas
+
+- Tipagem forte com TypeScript em todo o projeto.
+- Separação clara entre lógica de apresentação (componentes) e lógica de negócio (Redux/Sagas).
+- Utilização de hooks do React para gerenciamento de estado local e efeitos colaterais.
+- Código limpo, organizado e com nomes de variáveis e funções autoexplicativos.
