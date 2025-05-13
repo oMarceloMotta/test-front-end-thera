@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Notebook Dell XPS",
+      "category": "Eletrônicos",
+      "price": 8999.99,
+      "description": "Um notebook potente para todas as suas necessidades.",
+      "image": "https://example.com/notebook.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Smart TV 55''",
+      "category": "Eletrônicos",
+      "price": 2999.99,
+      "description": "Smart TV com resolução 4K e HDR.",
+      "image": "https://example.com/tv.jpg"
+    },
+    {
+      "id": "3812dd56-e4c1-4ffe-9448-e86f610c249d",
+      "name": "Alo pessoal",
+      "category": "Celulares",
+      "price": 199.09,
+      "description": "Descricao",
+      "image": "https://www.fonedeouvido.com/image.png"
+    },
+    {
+      "id": "9b166b82-a1c2-4c9e-99df-20347517a836",
+      "name": "Reprova - Categorias ",
+      "category": "Eletrônicos",
+      "price": 100,
+      "description": "Descricao teste",
+      "image": "https://www.google.com.br"
+    },
+    {
+      "id": "9b166b82-a1c2-4c9e-99df-203a47517a836",
+      "name": "Reprova - Categorias ",
+      "category": "Eletrônicos",
+      "price": 100,
+      "description": "Categorias",
+      "image": "https://www.google.com.br"
+    },
+    {
+      "id": "9b166b82-a1c2-4c9e-99df-2034bc7517a836",
+      "name": "Muitas musicas ",
+      "category": "Eletrônicos",
+      "price": 100,
+      "description": "Descricao teste",
+      "image": "https://www.google.com.br"
+    },
+    {
+      "id": "9b166b82-a1ca2-4c9e-99df-2034bc7517a836",
+      "name": "Reprova - Categorias ",
+      "category": "Eletrônicos",
+      "price": 100,
+      "description": "Descricao teste",
+      "image": "https://www.google.com.br"
+    },
+    {
+      "id": "ab97fe32-587b-4f0a-9318-b2a7cccf93ca",
+      "name": "Marcelo",
+      "category": "Celulares",
+      "price": 2.05,
+      "description": "Descricao ",
+      "image": "https://localhost.com.br/marcelo"
+    }
+  ]
+}
