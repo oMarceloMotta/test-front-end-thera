@@ -9,8 +9,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body className="vsc-initialized" cz-shortcut-listen="true">
         <Provider store={store}>{children}</Provider>
       </body>
     </html>

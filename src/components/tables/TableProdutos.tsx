@@ -1,4 +1,4 @@
-"use client";
+import Image from "next/image";
 import { useState } from "react";
 
 interface TableProdutosProps {
@@ -98,12 +98,22 @@ export function TableProdutos({
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                       {produto?.description}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                      <img
-                        src={produto?.image}
-                        alt={produto?.name}
-                        className="h-16 w-16 object-cover"
-                      />
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="relative h-20 w-20 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+                        <Image
+                          src={produto?.image || "/images/default-product.png"}
+                          alt={produto?.name || "Product image"}
+                          width={80}
+                          height={80}
+                          className="object-cover"
+                          quality={75}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          onError={(e) => {
+                            const target = e.currentTarget;
+                            target.src = "/images/default-product.png";
+                          }}
+                        />
+                      </div>
                     </td>
                   </tr>
                 ))}

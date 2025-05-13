@@ -23,7 +23,7 @@ export function ListaProdutos() {
     let queryParams = "?";
     if (filters.name) {
       const encodedName = encodeURIComponent(`${filters.name}`);
-      queryParams += `name_like=${encodedName}&`;
+      queryParams += `name=${encodedName}&`;
     }
     if (filters.minPrice) {
       queryParams += `price_gte=${filters.minPrice}&`;

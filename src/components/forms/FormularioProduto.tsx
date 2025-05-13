@@ -1,5 +1,5 @@
 "use client";
-import { createProduto } from "@/redux/actions/productActions";
+import { createProduto } from "../../redux/actions/productActions";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 
@@ -61,42 +61,42 @@ export function FormularioProduto() {
       </h2>
 
       {error && (
-        <div className="mb-6 bg-red-50 border-l-4 border-red-500 p-4 rounded">
-          <p className="text-red-700">{error}</p>
+        <div className="mb-6 bg-red-50 border-l-4 border-red-500 p-4 rounded-lg shadow-sm">
+          <p className="text-red-700 font-medium">{error}</p>
         </div>
       )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label
-            htmlFor="nome"
+            htmlFor="name"
             className="block text-sm font-medium text-gray-700 mb-2"
           >
             Nome do Produto
           </label>
           <input
             type="text"
-            id="nome"
-            name="nome"
+            id="name"
+            name="name"
             value={formData.name}
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, name: e.target.value }))
             }
-            className="w-full px-4 py-2 border text-gray-600 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 text-gray-600  py-2 border-2 border-blue-100 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors duration-200"
             placeholder="Nome do produto"
           />
         </div>
 
         <div>
           <label
-            htmlFor="categoria"
+            htmlFor="category"
             className="block text-sm font-medium text-gray-700 mb-2"
           >
             Categoria
           </label>
           <select
-            id="categoria"
-            name="categoria"
+            id="category"
+            name="category"
             value={formData.category}
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, category: e.target.value }))
@@ -114,19 +114,19 @@ export function FormularioProduto() {
 
         <div>
           <label
-            htmlFor="preco"
+            htmlFor="price"
             className="block text-sm font-medium text-gray-700 mb-2"
           >
             Preço
           </label>
           <div className="relative">
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-green-400 font-bold">
               R$
             </span>
             <input
               type="number"
-              id="preco"
-              name="preco"
+              id="price"
+              name="price"
               value={formData.price}
               onChange={(e) =>
                 setFormData((prev) => ({ ...prev, price: e.target.value }))
@@ -141,14 +141,14 @@ export function FormularioProduto() {
 
         <div>
           <label
-            htmlFor="descricao"
+            htmlFor="description"
             className="block text-sm font-medium text-gray-700 mb-2"
           >
             Descrição
           </label>
           <textarea
-            id="descricao"
-            name="descricao"
+            id="description"
+            name="description"
             value={formData.description}
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, description: e.target.value }))
@@ -160,15 +160,15 @@ export function FormularioProduto() {
 
         <div>
           <label
-            htmlFor="imagem"
+            htmlFor="image"
             className="block text-sm font-medium text-gray-700 mb-2"
           >
             URL da Imagem
           </label>
           <input
             type="url"
-            id="imagem"
-            name="imagem"
+            id="image"
+            name="image"
             value={formData.image}
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, image: e.target.value }))

@@ -14,7 +14,7 @@ import {
   UPDATE_PRODUTO_REQUEST,
   DELETE_PRODUTO_REQUEST
 } from '../actions/productActions';
-import { ENDPOINTS } from '@/api/api';
+import { ENDPOINTS } from '../../api/api';
 
 
 function* fetchProdutos({ payload }: { payload: string }): Generator {

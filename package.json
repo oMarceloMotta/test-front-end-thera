@@ -3,25 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "server": "npx json-server --watch db.json --port 4000 --host 0.0.0.0"
   },
   "jest": {
-    "setupFiles": [
-      "./test/jest-setup.js"
-    ],
-    "snapshotSerializers": [
-      "<rootDir>/node_modules/enzyme-to-json/serializer"
-    ],
-    "moduleNameMapper": {
-      "^.+\\.(css|scss)$": "identity-obj-proxy"
-    }
+    "testEnvironment": "jsdom"
   },
+  "setupFiles": [
+    "./test/jest-setup.js"
+  ],
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.1",
     "axios": "^1.9.0",
@@ -33,10 +29,13 @@
     "redux-saga": "^1.3.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^16.3.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^20",
@@ -44,6 +43,8 @@
     "@types/react-dom": "^19.1.4",
     "@types/react-test-renderer": "^19.1.0",
     "@types/redux-mock-store": "^1.5.0",
+    "@types/testing-library__jest-dom": "^5.14.9",
+    "babel-jest": "^29.7.0",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
     "identity-obj-proxy": "^3.0.0",

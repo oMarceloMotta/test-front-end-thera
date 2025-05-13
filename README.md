@@ -55,6 +55,12 @@ Desenvolver uma aplicação web para gerenciamento de produtos, utilizando as me
 2. **Inicie o servidor:**
 
    ```bash
+   npm run server
+   ```
+
+   ou
+
+   ```bash
    npx json-server --watch db.json --port 4000 --host 0.0.0.0
    ```
 
